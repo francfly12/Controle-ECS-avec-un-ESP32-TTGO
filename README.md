@@ -52,6 +52,12 @@ Il y a également une fonction anti-légionellose. Elle vérifie que la tempéra
 **Boitier 3D**
 Je peux fournir les STL des boitiers.
 
+**Liens**
 
+https://wiki.geekworm.com/WEMOS_ESP32_Board_with_18650_Battery_Holder
+
+https://forum.arduino.cc/t/module-esp32-oled-batterie/602714/105
+
+https://github.com/olikraus/u8g2/wiki
 
 
