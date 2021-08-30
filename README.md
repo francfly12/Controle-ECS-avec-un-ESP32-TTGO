@@ -31,7 +31,8 @@ Si problème, il existe une possibilité pour mettre un capa sur la pin reset do
 l'OLED est piloté par un SSD1306 en bus I2C. connecté sur les pins 5 (SDA) et 4 (SCL). le circuit est à l'adresse 0x3c.
 la librairie U8G2lib marche très bien. Voir la doc sur github, il y a pléthore de fontes et de fonctions. Et avec cette librairie, pas de soucis d'interférences avec d'autres libraries.
 
-[20210825_160534](https://user-images.githubusercontent.com/16886296/131267850-9fc950e2-f41c-4560-a304-7423ebd713dc.jpg)
+![20210825_160534](https://user-images.githubusercontent.com/16886296/131299392-c5a11bf8-6b48-4ca9-922c-6149985f019d.jpg)
+
 
 **Bus Serie**
 Le bus série  0 est mappé sur les pins D0 et D1, et passent par USB vers la console de l'IDE Arduino.(classique)
