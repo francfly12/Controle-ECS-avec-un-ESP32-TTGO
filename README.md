@@ -1,8 +1,9 @@
 # Controle-ECS-avec-un-ESP32-TTGO
-Controle de la puissance de chauffe d'un chauffe eau electrique - utilisation d'un module ESP32 TTGO - commentaires en Français
+Controle de la puissance de chauffe d'un chauffe eau electrique ECS - utilisation d'un module ESP32 TTGO - commentaires en Français
+
 ![20210829_223855](https://user-images.githubusercontent.com/16886296/131267693-ceaec2de-1e1c-413b-b61f-e74991a69c4a.jpg)
 
-English users can ask for translation if needed.
+English users can ask for translation.
 
 Le systeme utilise une carte a **ESP32 lilygo.**
 Le but est de piloter un chauffe eau électrique de façon a réguler sa consommation entre 0 et 100%. Ceci afin d'utiliser au mieux un système de génération électrique photovoltaique. Je crée ce Github car certains voudront peut etre utiliser cette carte pour d'autres circuits.
@@ -30,6 +31,8 @@ Si problème, il existe une possibilité pour mettre un capa sur la pin reset do
 l'OLED est piloté par un SSD1306 en bus I2C. connecté sur les pins 5 (SDA) et 4 (SCL). le circuit est à l'adresse 0x3c.
 la librairie U8G2lib marche très bien. Voir la doc sur github, il y a pléthore de fontes et de fonctions. Et avec cette librairie, pas de soucis d'interférences avec d'autres libraries.
 
+[20210825_160534](https://user-images.githubusercontent.com/16886296/131267850-9fc950e2-f41c-4560-a304-7423ebd713dc.jpg)
+
 **Bus Serie**
 Le bus série  0 est mappé sur les pins D0 et D1, et passent par USB vers la console de l'IDE Arduino.(classique)
 Pour avoir un deuxième port série, il faut utiliser un port virtuel et le mapper, ici sur les pins  16 et 17. 
@@ -41,7 +44,9 @@ Le capteur est un classique ds18b20. Son utilisation est bien documentée; libra
 **Pilotage-Triac**
 J'ai utilisé un dimmer module tout fait, de chez robotDYn. Connecté sur pin 25 (PSM, modulation ) et pin 26(signal zero crossing).
 Librairie RBDdimmer.h.
-![20210825_160534](https://user-images.githubusercontent.com/16886296/131267850-9fc950e2-f41c-4560-a304-7423ebd713dc.jpg)
+
+![20210830_083232](https://user-images.githubusercontent.com/16886296/131298678-fdc4c8d9-0d80-4ff1-bdf4-39ca3f0ca797.jpg)
+
 
 Le **programme** est assez simple et documenté.
 Il s'agit simplement de recevoir un ordre sur le bus série, qui correspond à une modulation de la chauffe entre 0 et 100%. L'ordre est exécuté par le module à triac.
